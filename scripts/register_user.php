@@ -2,12 +2,16 @@
 
 include_once 'functions.php';
 
-// Remove this if UI is done
+// Remove comment if UI is done
 // $email = $_POST['email'];
 // $username = $_POST['username'];
 // $password = $_POST['password'];
 // $firstname = $_POST['firstname'];
 // $lastname = $_POST['lastname'];
+// if (empty($email) || empty($username) || empty($password) || empty($firstname) || empty($lastname)) {
+//   // Error msg and redirect to registration page
+//   echo 'Please fill up the required fields';
+// }
 
 // For Testing
 // $email = 'tupz0799@gmail.com';
@@ -17,12 +21,12 @@ include_once 'functions.php';
 // $lastname = 'Bermudez';
 
 if(isEmailExist($email)) {
-  // Error msg
+  // Error msg and redirect to login page
   echo 'Email has been already registered, login now!';
 
 } else {
   if(isUsernameExist($username)){
-    // Error msg
+    // Error msg and redirect to registration page
     echo 'Username has already been taken';
 
   } else {
