@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -79,10 +81,19 @@
                 <span class="badge badge-dark">11</span>
                 <span class="sr-only">unread messages</span>
               </button>
-              <button type="button" class="btn btn-primary" style="margin: 0rem 0.25rem">
-                <i class="far fa-user" style="color: #fff; margin: 0rem 0.25rem 0rem 0rem"></i>
-                Renz Rallion Gomez
-              </button>
+
+              <?php if(isset($_SESSION['id'])){
+                echo '<button type="button" class="btn btn-primary" style="margin: 0rem 0.25rem">
+                  <i class="far fa-user" style="color: #fff; margin: 0rem 0.25rem 0rem 0rem"></i>
+                  '.$_SESSION['firstname'].' '.$_SESSION['lastname'].'
+                </button>';
+              } else {
+                echo '<button type="button" class="btn btn-primary" style="margin: 0rem 0.25rem">
+                  <i class="far fa-user" style="color: #fff; margin: 0rem 0.25rem 0rem 0rem"></i>
+                  Login
+                </button>';
+              }?>
+
             </form>
           </div>
         </nav>
