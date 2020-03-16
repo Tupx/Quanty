@@ -8,8 +8,8 @@
       // $password = $_POST['password'];
 
       // For Testing
-      // $username = 'Demo';
-      // $password = 'Password123';
+      $username = 'Demo';
+      $password = 'Password123';
 
       if(isUsernameExist($username)) {
 
@@ -20,6 +20,7 @@
         if($password == $result['password']) {
             // Success Msg and Redirect to dashboard
             echo 'Success';
+            header('Location: ../index.php?success');
 
             // Creates a session
             $_SESSION['id'] = $result['user_id'];

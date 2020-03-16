@@ -69,31 +69,30 @@
             </ul>
 
             <form class="form-inline my-2 my-lg-0" style="vertical-align: middle">
-              <button type="button" class="btn btn-outline-primary" style="margin: 0rem 0.25rem">
-                <i class="far fa-envelope" style="color: #cc0000"></i>
-                Messsages
-                <span class="badge badge-dark">4</span>
-                <span class="sr-only">unread messages</span>
-              </button>
-              <button type="button" class="btn btn-outline-primary" style="margin: 0rem 0.25rem">
-                <i class="far fa-bell" style="color: #cc0000"></i>
-                Notifications
-                <span class="badge badge-dark">11</span>
-                <span class="sr-only">unread messages</span>
-              </button>
-
-              <?php if(isset($_SESSION['id'])){
-                echo '<button type="button" class="btn btn-primary" style="margin: 0rem 0.25rem">
+            <?php if(isset($_SESSION['id'])) {
+              echo '<form class="form-inline my-2 my-lg-0" style="vertical-align: middle">
+                <button type="button" class="btn btn-outline-primary" style="margin: 0rem 0.25rem">
+                  <i class="far fa-envelope" style="color: #cc0000"></i>
+                  Messsages
+                  <span class="badge badge-dark">4</span>
+                  <span class="sr-only">unread messages</span>
+                </button>
+                <button type="button" class="btn btn-outline-primary" style="margin: 0rem 0.25rem">
+                  <i class="far fa-bell" style="color: #cc0000"></i>
+                  Notifications
+                  <span class="badge badge-dark">11</span>
+                  <span class="sr-only">unread messages</span>
+                </button>
+                <button href="?accountPage" type="button" class="btn btn-primary" style="margin: 0rem 0.25rem">
                   <i class="far fa-user" style="color: #fff; margin: 0rem 0.25rem 0rem 0rem"></i>
                   '.$_SESSION['firstname'].' '.$_SESSION['lastname'].'
                 </button>';
-              } else {
-                echo '<button type="button" class="btn btn-primary" style="margin: 0rem 0.25rem">
+              }else{
+                echo'<button href=? type="button" class="btn btn-primary" style="margin: 0rem 0.25rem">
                   <i class="far fa-user" style="color: #fff; margin: 0rem 0.25rem 0rem 0rem"></i>
                   Login
                 </button>';
-              }?>
-
+            }?>
             </form>
           </div>
         </nav>
