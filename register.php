@@ -1,5 +1,3 @@
-<?php session_start(); if(isset($_SESSION['id'])){header('Location: ../Quanty/');}?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -69,28 +67,9 @@
 
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Login</li>
+        <li class="breadcrumb-item active" aria-current="page">Register</li>
       </ol>
     </nav>
 
-    <div class="container">
-      <div class="row justify-content-center align-items-center" style="height:50vh">
-        <div class="col-5 ">
-          <a href="../Quanty/"><img src="img/banner.png" class="mb-5" style="width:90%"></a>
-          <form method="POST" action="scripts/login_user.php">
-            <div class="form-group">
-              <label>Username</label>
-              <input type="text" class="form-control" name="username">
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <input type="password" class="form-control" name="password">
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-            <a href="register.php"><small class="form-text text-muted">Dont have an account? Create Account now</small></a>
-          </form>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
