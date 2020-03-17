@@ -3,13 +3,8 @@
   if (!isset($_SESSION['id'])) {
       include_once 'functions.php';
 
-      // Remove Comment if UI is done
-      // $username = $_POST['username'];
-      // $password = $_POST['password'];
-
-      // For Testing
-      $username = 'Demo';
-      $password = 'Password123';
+      $username = $_POST['username'];
+      $password = $_POST['password'];
 
       if(isUsernameExist($username)) {
 
@@ -18,27 +13,20 @@
         $result = mysqli_fetch_assoc($query);
 
         if($password == $result['password']) {
-            // Success Msg and Redirect to dashboard
-            echo 'Success';
-            header('Location: ../index.php?success');
-
-            // Creates a session
             $_SESSION['id'] = $result['user_id'];
             $_SESSION['username'] = $username;
             $_SESSION['firstname'] = $result['firstname'];
             $_SESSION['lastname'] = $result['lastname'];
+            header('Location: ../index.php?success');
 
         } else {
-          // Error Msg and Redirect to login page
-          echo 'Username or Password is incorrect';
+          header('Location: ../login.php?error');
         }
 
       } else {
-        // Error Msg and Redirect to login Page
-        echo 'Username or Password is incorrect';
+        header('Location: ../login.php?error');
       }
 
   } else {
-    // Welcome back message and Redirect to dashboard
-    echo 'welcome back '.$_SESSION['firstname'];
+    header('Location ../?welcomeBack');
   }
