@@ -13,8 +13,9 @@
         <script type="text/javascript" src="bootstrap-4.4.1-dist/js/jquery-3.4.1.slim.min.js"></script>
         <script type="text/javascript" src="bootstrap-4.4.1-dist/js/popper.min.js"></script>
         <script type="text/javascript" src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-
-        <!-- <link href="font/fontawesome/css/all.css" rel="stylesheet"> -->
+        <script type="text/javascript" src="ajax/jquery.js"></script>
+        <script type="text/javascript" src="ajax/liveLoadBadge.js"></script>
+        <link href="font/fontawesome/css/all.css" rel="stylesheet">
         <link href="font/futura.zip" rel="stylesheet">
         <link rel="stylesheet" href="font/fontawesome/css/all.css">
         <script type="text/javascript" src="font/fontawesome/js/all.js"></script>
@@ -74,13 +75,13 @@
                 <a href="messages.php"><button type="button" class="btn btn-outline-primary" style="margin: 0rem 0.25rem">
                   <i class="far fa-envelope" style="color: #cc0000"></i>
                   Messsages
-                  <span class="badge badge-dark">4</span>
+                  <span id="MessagesBadge" class="badge badge-dark"></span>
                   <span class="sr-only">unread messages</span>
                 </button></a>
                 <a href="notifications.php"><button type="button" class="btn btn-outline-primary" style="margin: 0rem 0.25rem">
                   <i class="far fa-bell" style="color: #cc0000"></i>
                   Notifications
-                  <span class="badge badge-dark">11</span>
+                  <span id="NotificationBadge" class="badge badge-dark"></span>
                   <span class="sr-only">unread messages</span>
                 </button></a>
                 <a href="account.php"><buttontype="button" class="btn btn-primary" style="margin: 0rem 0.25rem">
