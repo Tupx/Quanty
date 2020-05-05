@@ -6,7 +6,6 @@
 
         <title>Quanty</title>
         <link rel="icon" href="img/favicon2.png">
-
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.css">
         <script type="text/javascript" src="bootstrap-4.4.1-dist/js/jquery-3.4.1.slim.min.js"></script>
         <script type="text/javascript" src="bootstrap-4.4.1-dist/js/popper.min.js"></script>
@@ -32,7 +31,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
               </li>
 
               <li class="nav-item dropdown">
@@ -40,7 +39,7 @@
                   Forum
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Statistics</a>
+                  <a class="dropdown-item" href="statistics.php">Statistics</a>
                   <a class="dropdown-item" href="#">People</a>
                   <a class="dropdown-item" href="#">Health</a>
                   <a class="dropdown-item" href="#">Location</a>

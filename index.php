@@ -13,12 +13,14 @@ include_once 'header2.php';?>
 
           <div class="cat-card">
             <div style="width: auto; margin: auto; overflow: hidden">
-              <div class="card" style="width: 13rem;">
-                <img src="img/Statistics.png" class="card-img-top" alt="Statistics">
-                <div class="card-body">
-                  <h5 class="card-title">Statistics</h5>
+              <a href="construct.php">
+                <div class="card" style="width: 13rem;">
+                  <img src="img/Statistics.png" class="card-img-top" alt="Statistics">
+                  <div class="card-body">
+                    <h5 class="card-title">Statistics</h5>
+                  </div>
                 </div>
-              </div>
+              </a>
               <div class="card" style="width: 13rem;">
                 <img src="img/People.png" class="card-img-top" alt="People">
                 <div class="card-body">

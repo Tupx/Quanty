@@ -15,7 +15,7 @@ include 'header2.php'; $id = $_SESSION['id'];?>
     <div class="col-3 h-100">
       <h3>Friends</h3>
       <ul class="list-group mt-2">
-        <li class="list-group-item" style="cursor:pointer">Friend 1</li>
+        <?php include_once 'scripts/getFriends.php';?>
       </ul>
     </div>
 
@@ -23,10 +23,11 @@ include 'header2.php'; $id = $_SESSION['id'];?>
       <div id="messages" style="background-color:#B20000;color:white;border-radius:10px;padding:1em;">
       </div>
       <div class="row">
-        <input type="text" class="form-control mt-3 ml-5 col-10" placeholder="Send a message">
+        <input id="msg" type="text" class="form-control mt-3 ml-5 col-10" placeholder="Send a message">
         <button id="send" class="btn btn-primary mt-3 ml-3" style="height: 2.5em;">Send</button>
       </div>
     </div>
+
   </div>
 
 </div>
@@ -34,14 +35,15 @@ include 'header2.php'; $id = $_SESSION['id'];?>
 <script type="text/javascript">
   $('document').ready(function() {
 
-    $('#messages').load('scripts/getMsg.php');
+    $('#messages').load('scripts/getMsg.php', {user:"<?php echo $_GET['friend'];?>"});
 
     setInterval (function () {
-      $('#messages').load('scripts/getMsg.php');
+      $('#messages').load('scripts/getMsg.php', {user:"<?php echo $_GET['friend'];?>"});
     }, 1000);
 
     $('#send').click(function() {
-      $.post("scripts/sendMsg.php", {});
+      $.post("scripts/sendMsg.php", {msg:$('#msg').val(), reciever:"<?php echo $_GET['friend'];?>"});
+      $('#msg').val('');
     });
 
   });

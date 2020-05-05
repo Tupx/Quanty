@@ -44,3 +44,18 @@ function generate_id() {
   }
   return $id;
 }
+
+function generate_package_id($fname,$lname) {
+  $name = $fname.$lname;
+  $alphabets = substr(str_shuffle(strtoupper($name)),0,5);
+  $id  = substr(str_shuffle($alphabets.rand()), 0, 10);
+  $len = strlen($id);
+  return $id;
+}
+
+function get_id($username){
+  $sql = "SELECT * FROM users WHERE username = '$username' ";
+  $query = mysqli_query($GLOBALS['DB_CON'], $sql);
+  $result = mysqli_fetch_row($query);
+  return $result[0];
+}
