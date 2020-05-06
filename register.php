@@ -1,5 +1,8 @@
-<?php session_start(); if(isset($_SESSION['id'])){header('Location: ./');}
-include('header.html')?>
+<?php session_start();
+if(isset($_SESSION['id'])){header('Location: ./');}
+include('header.html');
+if(isset($_GET['emptyFields'])){echo "<script>alert('All fields are required, Please fill in all forms :) ') </script>";}
+else if (isset($_GET['usernameTaken'])) echo "<script> alert('Username is already taken, please choose another one ;) ') </script>";?>
 
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">

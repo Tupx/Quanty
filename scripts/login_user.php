@@ -17,7 +17,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['firstname'] = $result['firstname'];
             $_SESSION['lastname'] = $result['lastname'];
-            header('Location: ../index.php?success');
+            header('Location: ../?success');
 
         } else {
           header('Location: ../login.php?error');

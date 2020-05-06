@@ -1,7 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION['id'])) { header("Location: login.php");};
-include 'header2.php';?>
+include 'header2.php';
+?>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -72,3 +73,9 @@ include 'header2.php';?>
 
   </div>
 </div>
+
+<?php if(isset($_GET['successInformation'])) {echo "<script>alert('Your account has been updated successfuly :) ')</script>";}
+else if(isset($_GET['errorEmailTaken'])) {echo "<script>alert('That email is already registered by someone')</script>";}
+else if(isset($_GET['successPass'])) {echo "<script>alert('Your password has been successfuly updated :) ')</script>";}
+else if(isset($_GET['errorOldPass'])) {echo "<script>alert('Your old password is incorrect, please try again')</script>";}
+else if(isset($_GET['errorRetypePassword'])) {echo "<script>alert('Your new password does not match, please try again')</script>";} ?>

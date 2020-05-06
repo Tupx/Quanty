@@ -12,7 +12,8 @@ include 'header2.php';?>
         <nav class="navbar" style="background-color: #cc0000; padding: 1rem">
             <div class="form-inline">
                 <img src="img/statistics.png" height="60" width="auto">
-                <h4 class="display-4" style="color: #fff; margin: 0rem 1rem">Statistics</h4>
+                <h4 class="display-4" style="color: #fff; margin: 0rem 1rem">Statistics
+                <?php if(isset($_GET['code'])){echo "> ".$_GET['code']." ";} ?></h4>
             </div>
             <div class="form-inline">
                 <a href="#" id="save">
@@ -113,4 +114,5 @@ include 'header2.php';?>
             </div>
         </nav>
     </body>
+    <?php if(isset($_GET['code'])) {echo "<script>alert('Your package has been saved with the code ".$_GET['code']."')</script>";} ?>
 </html>

@@ -82,5 +82,9 @@ include_once 'header2.php';?>
             <p class="lead" style="margin-bottom: 0rem">Quanty is managed by people who truly care.</p>
             <p class="lead">For them, the work never stops until mankind has reached its full potential and beyond.</p>
         </div>
+        <?php if(isset($_GET['welcomeback'])) {echo '
+          <script>alert("WELCOME BACK '.$_SESSION['username'].' ")</script>';}
+          else if(isset($_GET['success'])) {echo '
+          <script>alert("WELCOME TO QUANTY '.$_SESSION['username'].' ")</script>';}?>
     </body>
 </html>

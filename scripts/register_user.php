@@ -17,7 +17,7 @@ if (empty($email) || empty($username) || empty($password) || empty($firstname) |
 
   if(isEmailExist($email)) {
     // Error msg and redirect to login page
-    header('Location:../register.php?emailTaken');
+    header('Location:../login.php?emailTaken');
 
   } else {
 

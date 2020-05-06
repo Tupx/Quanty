@@ -27,5 +27,8 @@ include('header.html')?>
     </div>
   </div>
 
+  <?php if(isset($_GET['error'])) {echo '<script>alert("Your username or password is incorrect, Please try again :)")</script>';}
+  else if(isset($_GET['emailTaken'])) {echo '<script>alert("Your email is already registered, Login instead :) ")</script>';}?>
+
 </body>
 </html>
