@@ -28,7 +28,7 @@ else if (isset($_GET['usernameTaken'])) echo "<script> alert('Username is alread
             </div>
 
             <button type="submit" class="btn btn-primary">CREATE ACCOUNT</button>
-            <a href="login.php"><small class="form-text text-muted">Already have an account? Login here!</small></a>
+            <p><small class="form-text text-muted">Already have an account? <a href="login.php" style="color: red;">Login now.</a></small></p>
           </form>
         </div>
       </div>

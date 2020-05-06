@@ -46,7 +46,7 @@ CREATE TABLE `messages` (
 CREATE TABLE `notifications` (
   `notif_id` int(20) NOT NULL,
   `user_id` int(10) NOT NULL,
-  `content` varchar(20) NOT NULL,
+  `content` TEXT NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

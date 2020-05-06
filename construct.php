@@ -4,7 +4,7 @@ include 'header2.php';?>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html" style="text-decoration: none;">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Statistics</li>
+            <li class="breadcrumb-item active" aria-current="page">Statistics <?php if(isset($_GET['code'])){echo "- File ID: ".$_GET['code']." ";} ?></li>
           </ol>
         </nav>
         <?php if(!isset($_SESSION['id'])) {echo '<p style="font-size: 2rem; text-align:center;" class="m-0">
@@ -13,19 +13,33 @@ include 'header2.php';?>
             <div class="form-inline">
                 <img src="img/statistics.png" height="60" width="auto">
                 <h4 class="display-4" style="color: #fff; margin: 0rem 1rem">Statistics
-                <?php if(isset($_GET['code'])){echo "> ".$_GET['code']." ";} ?></h4>
+              </h4>
             </div>
+            <?php if (isset($_GET['code'])) {
+              include_once 'scripts/functions.php';
+              $code = $_GET['code'];
+              $sql = "SELECT * FROM statpackage WHERE package_id = '$code' ";
+              $query = mysqli_query($DB_CON, $sql);
+              $result = mysqli_fetch_row($query);
+            } ?>
             <div class="form-inline">
                 <a href="#" id="save">
-                    <div class="form-inline">
-                        <img src="img/save.png" width="32" height="auto">
-                        <h5 class="display-5" style="color: #fff; margin: 0rem 1rem">Save</h5>
-                    </div>
+                  <div class="form-inline">
+                      <img src="img/save.png" width="32" height="auto">
+                        <form action="#" method="post">
+                          <input style="font-size: 20px; border: none; background-color: #cc0000; color: #fff; margin: 0rem 1rem" type="submit" value="Send"></input>
+                        </form>
+                  </div>
                 </a>
                 <a href="#" id="send">
                     <div class="form-inline">
                         <img src="img/send.png" width="32" height="auto">
-                        <h5 class="display-5" style="color: #fff; margin: 0rem 1rem">Send</h5>
+                          <form class="" action="scripts/notif.php" method="post">
+                            <input type="text" name="notif" value="sendPackage" style="display: none;">
+                            <input type="text" name="title" value="<?php if(isset($_GET['code'])) { echo $result[2]; }?>" style="display: none;">
+                            <input type="text" name="code" value="<?php if(isset($_GET['code'])) { echo $_GET['code']; }?>" style="display:none;">
+                            <input style="font-size: 20px; border: none; background-color: #cc0000; color: #fff; margin: 0rem 1rem" type="submit" value="Send"></input>
+                          </form>
                     </div>
                 </a>
             </div>
@@ -38,10 +52,6 @@ include 'header2.php';?>
                 </div>
                 <?php include_once 'scripts/functions.php';
                 if(isset($_GET['code'])) {
-                $code = $_GET['code'];
-                $sql = "SELECT * FROM statpackage WHERE package_id = '$code' ";
-                $query = mysqli_query($DB_CON, $sql);
-                $result = mysqli_fetch_row($query);
                 echo '<input value="'.$result[2].'" name="title" type="text" class="form-control" placeholder="Example title.qntm" aria-describedby="save" style="border-color: #cc0000">';
               } else {
                 echo '<input name="title" type="text" class="form-control" placeholder="Example title.qntm" aria-describedby="save" style="border-color: #cc0000">';
@@ -114,5 +124,7 @@ include 'header2.php';?>
             </div>
         </nav>
     </body>
-    <?php if(isset($_GET['code'])) {echo "<script>alert('Your package has been saved with the code ".$_GET['code']."')</script>";} ?>
+    <?php if (isset($_GET['code']))  {
+      echo "<script> alert('Your package has been saved with the code ".$_GET['code']." ') </script>";
+    } ?>
 </html>

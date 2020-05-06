@@ -21,14 +21,14 @@ include('header.html')?>
             <input type="password" class="form-control" name="password">
           </div>
           <button type="submit" class="btn btn-primary">Login</button>
-          <a href="register.php"><small class="form-text text-muted">Dont have an account? Create Account now</small></a>
+          <p><small class="form-text text-muted">Dont have an account? <a href="register.php" style="color: red;">Create account now.</a> </small></p>
         </form>
       </div>
     </div>
   </div>
 
-  <?php if(isset($_GET['error'])) {echo '<script>alert("Your username or password is incorrect, Please try again :)")</script>';}
-  else if(isset($_GET['emailTaken'])) {echo '<script>alert("Your email is already registered, Login instead :) ")</script>';}?>
+  <?php if(isset($_GET['error'])) {echo '<script>alert("Your username or password is incorrect. Please try again. ")</script>';}
+  else if(isset($_GET['RegisterSuccess'])) {echo '<script>alert("Registration successful! ")</script>';}?>
 
 </body>
 </html>

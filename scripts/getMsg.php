@@ -6,7 +6,7 @@
   $friend = get_id($_POST['user']);
   $sql = "SELECT users.username, messages.message, messages.timestamp
   FROM messages INNER JOIN users ON messages.sender_id=users.user_id
-  WHERE sender_id = '$friend' AND reciever_id = '$id' OR sender_id = '$id' OR reciever_id = '$friend'
+  WHERE sender_id = '$friend' AND reciever_id = '$id' OR sender_id = '$id'
   ORDER BY messages.timestamp";
   $query = mysqli_query($DB_CON, $sql);
   while($result = mysqli_fetch_assoc($query)) {

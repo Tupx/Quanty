@@ -14,8 +14,9 @@ if (isset($_POST['pass']) || isset($_POST['info'])) {
     $email = $_POST['email'];
 
     if ($result[3] != $email) {
-        if(!isEmailExist($email)) {
+        if(isEmailExist($email)) {
           header("Location: ../account.php?errorEmailTaken");
+          exit();
         }
     }
 
