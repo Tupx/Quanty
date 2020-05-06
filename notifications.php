@@ -8,3 +8,5 @@ include 'header2.php';?>
     <li class="breadcrumb-item active" aria-current="page">Notifications</li>
   </ol>
 </nav>
+
+<?php include 'error404.html';?>

@@ -39,30 +39,30 @@
                   Forum
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="statistics.php">Statistics</a>
-                  <a class="dropdown-item" href="#">People</a>
-                  <a class="dropdown-item" href="#">Health</a>
-                  <a class="dropdown-item" href="#">Location</a>
-                  <a class="dropdown-item" href="#">Telecommunications</a>
+                  <a class="dropdown-item" href="error404.html">People</a>
+                  <a class="dropdown-item" href="error404.html">Statistics</a>
+                  <a class="dropdown-item" href="error404.html">Health</a>
+                  <a class="dropdown-item" href="error404.html">Location</a>
+                  <a class="dropdown-item" href="error404.html">Telecommunications</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Show all...</a>
+                  <a class="dropdown-item" href="error404.html">Show all...</a>
                 </div>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Download</a>
+                <a class="nav-link" href="error404.html">Download</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Tutorial</a>
+                <a class="nav-link" href="error404.html" tabindex="-1" aria-disabled="true">Tutorial</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">About</a>
+                <a class="nav-link" href="error404.html" tabindex="-1" aria-disabled="true">About</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Search</a>
+                <a class="nav-link" href="error404.html" tabindex="-1" aria-disabled="true">Search</a>
               </li>
             </ul>
 

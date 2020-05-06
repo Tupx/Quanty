@@ -48,5 +48,5 @@ if (isset($_POST['pass']) || isset($_POST['info'])) {
   }
 
 } else {
-  echo "error 404";
+  header("Location: ../error404.html");
 }

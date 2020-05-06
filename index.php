@@ -21,36 +21,46 @@ include_once 'header2.php';?>
                   </div>
                 </div>
               </a>
+              <a href="error404.html">
               <div class="card" style="width: 13rem;">
                 <img src="img/People.png" class="card-img-top" alt="People">
                 <div class="card-body">
                   <h5 class="card-title">People</h5>
                 </div>
               </div>
+              </a>
+              <a href="error404.html">
               <div class="card" style="width: 13rem;">
                 <img src="img/Health.png" class="card-img-top" alt="People">
                 <div class="card-body">
                   <h5 class="card-title">Health</h5>
                 </div>
               </div>
+              </a>
+              <a href="error404.html">
               <div class="card" style="width: 13rem;">
                 <img src="img/Location.png" class="card-img-top" alt="Location">
                 <div class="card-body">
                   <h5 class="card-title">Location</h5>
                 </div>
               </div>
+              </a>
+              <a href="error404.html">
               <div class="card" style="width: 13rem;">
                 <img src="img/Telecommunications.png" class="card-img-top" alt="Telecommunications">
                 <div class="card-body">
                   <h5 class="card-title">Telecom</h5>
                 </div>
               </div>
+              </a>
+              <a href="error404.html">
               <div class="card-etc" style="width: 13rem;">
                 <img src="img/More.png" class="card-img-top" alt="More">
                 <div class="card-body">
                   <h5 class="card-title">More...</h5>
                 </div>
               </div>
+              </a>
             </div>
           </div>
         </div>
