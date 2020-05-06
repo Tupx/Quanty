@@ -49,4 +49,8 @@ the demo account, the demo account has these credentials:
       Lastname: Account
 #############################################################
 
+This prototype is  a requirement @ University of the Cordilleras
+The members involved are Bermudez, Christopher; Gomez, Renz;
+Caranto, Hannah; Fernandez, Jeune
+
 © All Rights Reserved | Quanty Web Application Prototype 2020
