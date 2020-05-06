@@ -23,20 +23,22 @@ to the open source of Quanty Web Application. :) :) :) :) :)
 
 1. Please run a virtual server like XAMPP or WAMPP, but we
    highly recommend to use XAMPP in order for 100% functionality
+   
+2. Create a database in PhpMyAdmin, name the database as 'quanty' 
 
-2. Please import quanty.sql into PhpMyAdmin in order to import
-   the databases that are used in this web application.
-   The default user settings that are used in PhpMyAdmin:
+3. Select the database and import quanty.sql into PhpMyAdmin in 
+  order to import the tables that are used in this web
+  application. The default user settings that are used in PhpMyAdmin:
         server: localhost
         username: root
         password:
    If you have other user, you may change the credentials at
    scripts > functions.php > $DB_CON
 
-3. Please save this whole document on htdocs. If you have other
+4. Please save this whole document on htdocs. If you have other
    configurations, please save it there.
 
-4. All the setup is done. You may open the webpage now based
+5. All the setup is done. You may open the webpage now based
    on the configurations of your virtual server (example:
    localhost/Quanty). Please Enjoy the prototype :)
 
